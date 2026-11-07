@@ -1,0 +1,14 @@
+Brain-to-Build Community Edition
+SPDX-License-Identifier: Apache-2.0
+Copyright 2026 Ricardo Alves
+
+Third-party component notice:
+
+The GitHub Actions workflow uses actions/checkout v4.2.2, pinned to commit
+11bd71901bbe5b1630ceea73d27597364c9af683, and distributed by its upstream
+project under the MIT License. The workflow does not include or vendor the
+action's source. The upstream license is available at:
+https://github.com/actions/checkout/blob/11bd71901bbe5b1630ceea73d27597364c9af683/LICENSE
+
+No other third-party source code is intentionally bundled. Runtime and tests
+use Node.js built-in modules; Node.js is an external runtime, not included here.

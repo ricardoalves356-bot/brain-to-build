@@ -1,0 +1,27 @@
+# Local configuration, memory, workspaces, and evidence
+.local/
+.env
+.env.*
+!.env.example
+*.log
+*.jsonl
+*.stderr
+*.tap
+*.transcript
+*.bak
+*.backup
+backups/
+logs/
+work/
+coverage/
+dist/
+node_modules/
+.audit-tools/
+.obsidian/
+.codex/
+.claude/
+claude_desktop_config.json
+Thumbs.db
+Desktop.ini
+*.tmp
+*.lock

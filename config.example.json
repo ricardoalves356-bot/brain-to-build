@@ -1,0 +1,41 @@
+{
+  "vault": "C:/SampleData/Obsidian/SampleVault",
+  "projects": [
+    {
+      "id": "sample-app",
+      "name": "Sample App",
+      "aliases": ["sample", "demo app"],
+      "notes": ["Projects/Sample App.md"]
+    },
+    {
+      "id": "sample-docs",
+      "name": "Sample Docs",
+      "aliases": ["docs"],
+      "notes": ["Projects/Sample Docs.md"]
+    }
+  ],
+  "repositoriesRoot": "C:/SampleData/Repositories",
+  "paths": {
+    "workingDirectory": "C:/SampleData/BrainToBuild/work",
+    "logDirectory": "C:/SampleData/BrainToBuild/logs",
+    "backupDirectory": "C:/SampleData/BrainToBuild/backups"
+  },
+  "clients": {
+    "codexConfig": "C:/SampleData/Codex/config.toml",
+    "claudeCodeConfig": "C:/SampleData/Claude/claude.json",
+    "claudeDesktopConfig": ""
+  },
+  "github": {
+    "enabled": false,
+    "authProvider": "GitHub CLI or user's existing connector",
+    "accounts": [],
+    "organizations": [],
+    "allowedRepositories": []
+  },
+  "maxContextChars": 6000,
+  "maxNotes": 6,
+  "maxAttempts": 3,
+  "maxToolCalls": 30,
+  "maxUsd": 0,
+  "staleDays": 90
+}

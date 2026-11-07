@@ -1,0 +1,26 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Ricardo Alves
+name: Community checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # actions/checkout v4.2.2; upstream source and MIT license reviewed
+        with:
+          persist-credentials: false
+      - name: Require Node.js 22+
+        shell: pwsh
+        run: |
+          if ([int]((node --version).TrimStart('v').Split('.')[0]) -lt 22) { throw 'Node.js 22 or newer is required' }
+      - run: node scripts/check.mjs
+      - name: Run automated and Windows junction security tests
+        run: node --test
+      - run: node scripts/verify-distribution.mjs
+      - run: node scripts/verify-manifest.mjs
+      - run: node scripts/privacy-check.mjs
